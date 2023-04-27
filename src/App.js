@@ -1,12 +1,17 @@
 import Login from "./components/Login"
+import { BrowserRouter } from "react-router-dom";
+import Router from "./Router";
+import Navigation from "./components/Navigation";
+
 
 
 
 function App() {
   return (
-    <div>
-      <Login />
-    </div>
+    <BrowserRouter>
+      <Navigation />
+      <Router />
+    </BrowserRouter>
   );
 }
 

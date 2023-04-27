@@ -1,23 +1,66 @@
-import React from "react"
+import React, { useState } from "react";
+import cookie from 'cookie'
+import { useNavigate } from "react-router-dom";
+import { TextField, Button, Container } from "@mui/material";
 
-function Login() {
+const Login = () => {
+  const navigate = useNavigate();
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        console.log("submitted")
-    }
-    return (
-        <div>
-            <h1>Login Page</h1>
-            <h3>Welcome! Lets get you started with an account</h3>
-            <form>
-                <input placeholder="email"></input>
-                <input placeholder="password"></input>
-                <button onClick={handleSubmit}>Login</button>
-            </form>
-            <a>Forgot Password?</a>
-        </div>
-    )
-}
+  const [state, setState] = useState({
+    username: "",
+    password: "",
+  });
+
+  const handleTextChange = (e) => {
+    const { name, value } = e.target;
+    setState((prevState) => {
+      return {
+        ...prevState,
+        [name]: value,
+      };
+    });
+  };
+
+  const login = (e) => {
+    e.preventDefault();
+    // set cookie here
+    // set loggedIn = true and max-age = 60*1000
+    document.cookie = "loggedIn=true;Max-Age=1800";
+    navigate("/");
+  };
+
+  return (
+    <div className="App">
+      <Container maxWidth="sm">
+        <form className="login-form" onSubmit={login}>
+          <TextField
+            required
+            onChange={handleTextChange}
+            value={state.username}
+            name="username"
+            label="Username"
+            type="text"
+          />
+          <TextField
+            required
+            onChange={handleTextChange}
+            value={state.password}
+            name="password"
+            label="Password"
+            type="password"
+          />
+          <Button
+            type="submit"
+            className="login-button"
+            variant="contained"
+            color="primary"
+          >
+            Login
+          </Button>
+        </form>
+      </Container>
+    </div>
+  );
+};
 
 export default Login;
