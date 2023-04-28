@@ -3,6 +3,7 @@ import { Routes, Route, Navigate } from 'react-router'
 import cookie from 'cookie'
 import Home from './components/Home'
 import Login from './components/Login'
+import VinDecode from './containers/VinDecode'
 
 // Write checkAuth function here
 const checkAuth =() => {
@@ -27,6 +28,7 @@ const Router = () => {
     return (
         <Routes>
             <Route path="/" element={<ProtectedRoute component={Home} />} />
+            <Route path="/vindecode" element={<ProtectedRoute component={VinDecode} />} />
             <Route path="/login" element={<Login/>} />
         </Routes>
     );
