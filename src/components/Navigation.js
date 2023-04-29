@@ -23,6 +23,9 @@ const Navigation = () => {
           <li className="nav-list-item">
             <Link to="/vindecode">Vin</Link>
           </li>
+          <li className="nav-list-item">
+            <Link to="/userMaintenace">Maintenance</Link>
+          </li>
           <li
             className="nav-list-item"
             onClick={() => {

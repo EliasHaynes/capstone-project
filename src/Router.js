@@ -4,6 +4,7 @@ import cookie from 'cookie'
 import Home from './components/Home'
 import Login from './components/Login'
 import VinDecode from './containers/VinDecode'
+import ScheduledMaintenance from './containers/ScheduledMaintenance'
 
 // Write checkAuth function here
 const checkAuth =() => {
@@ -29,6 +30,7 @@ const Router = () => {
         <Routes>
             <Route path="/" element={<ProtectedRoute component={Home} />} />
             <Route path="/vindecode" element={<ProtectedRoute component={VinDecode} />} />
+            <Route path="/userMaintenace" element={<ProtectedRoute component={ScheduledMaintenance} />} />
             <Route path="/login" element={<Login/>} />
         </Routes>
     );
