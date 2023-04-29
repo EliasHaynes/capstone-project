@@ -9,4 +9,13 @@ const userCar = (state = [], action) => {
     }
 }
 
-export default combineReducers( {userCar})
+const userScheduledMaintenance = (state = [], action) => {
+    switch(action.type) {
+        case "FETCH_MAINTENANCE" :
+            return [...state,action.value]
+        default :
+            return state
+    }
+}
+
+export default combineReducers( { userCar, userScheduledMaintenance })
