@@ -5,7 +5,7 @@ function ScheduledMaintenance(props) {
         <div>
             <h1>Scheduled Maintenance</h1>
             <button onClick={props.fetchScheduledMaintenance}>Fetch Maintenance</button>
-            <p></p>
+            <p>{props.userScheduledMaintenance}</p>
         </div>
     )
 }

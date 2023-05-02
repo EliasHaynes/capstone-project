@@ -26,6 +26,13 @@ const Navigation = () => {
           <li className="nav-list-item">
             <Link to="/userMaintenace">Maintenance</Link>
           </li>
+          <li className="nav-list-item">
+            <Link to="/register">Register</Link>
+          </li>
+          <li className="nav-list-item">
+            <Link to="/repairlog">Repair Log</Link>
+          </li>
+
           <li
             className="nav-list-item"
             onClick={() => {
