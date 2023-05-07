@@ -5,9 +5,9 @@ function VinDecode(props) {
 
     return (
         <div>
-            <h1>Display your car</h1>
+            <h1>Display users car name here</h1>
             <button onClick={props.fetchUsersCar}></button>
-            <p>{props.userCar.year}</p>
+            <p>{props.userCarSpecs.year}</p>
             <p></p>
             <p></p>
             <p></p>

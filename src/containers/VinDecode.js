@@ -4,7 +4,7 @@ import { fetchUsersCar } from "../redux/actions";
 
 const mapStateToProps = (state) => {
     return {
-        userCar: state.userCar
+        userCarSpecs: state.userCarSpecs
     }
 }
 

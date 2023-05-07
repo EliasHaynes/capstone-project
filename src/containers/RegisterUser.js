@@ -1,10 +1,10 @@
-import Register from "../components/Register";
+import RegisterUser from "../components/RegisterUser";
 import { connect } from "react-redux";
 
 
 const mapStateToProps = () => {
     return {
-
+        
     }
 }
 
@@ -16,4 +16,4 @@ const mapDispatchToProps = () => {
 
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(Register)
+export default connect(mapStateToProps, mapDispatchToProps)(RegisterUser)

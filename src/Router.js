@@ -5,9 +5,9 @@ import Home from './components/Home'
 import Login from './components/Login'
 import VinDecode from './containers/VinDecode'
 import ScheduledMaintenance from './containers/ScheduledMaintenance'
-import Register from './containers/Register'
+import RegisterUser from './containers/RegisterUser'
 import RepairLog from './containers/RepairLog'
-
+import RegisterCar from './containers/RegisterCar'
 
 // Write checkAuth function here
 const checkAuth =() => {
@@ -35,7 +35,8 @@ const Router = () => {
             <Route path="/vindecode" element={<ProtectedRoute component={VinDecode} />} />
             <Route path="/userMaintenace" element={<ProtectedRoute component={ScheduledMaintenance} />} />
             <Route path="/repairlog" element={<ProtectedRoute component={RepairLog} />} />
-            <Route path="/register" element={<Register/>} />
+            <Route path="/registerCar" element={<ProtectedRoute component={RegisterCar} />} />
+            <Route path="/registerUser" element={<RegisterUser/>} />
             <Route path="/login" element={<Login/>} />
         </Routes>
     );

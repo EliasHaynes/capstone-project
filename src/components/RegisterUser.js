@@ -5,7 +5,7 @@ import cookie from "cookie"
 
 
 
-function Register() {
+function RegisterUser() {
     const navigate = useNavigate()
 
     const [state, setState] = useState({
@@ -23,6 +23,7 @@ function Register() {
         document.cookie = "loggedIn=true;Max-Age=1800";
         navigate("/")
     }
+
     const handleTextChange = (e) => {
         const { name, value } = e.target;
         setState((prevState) => {
@@ -31,7 +32,7 @@ function Register() {
             [name]: value,
           };
         });
-      };
+    };
       
     return (
         <div>
@@ -49,4 +50,4 @@ function Register() {
     )
 }
 
-export default Register
+export default RegisterUser

@@ -1,4 +1,6 @@
 export default {
-    userCar: [],
-    userScheduledMaintenance: []
+    userCarSpecs: [],
+    userScheduledMaintenance: [],
+    repairLog: [],
+    userRegisterCar: []
 }

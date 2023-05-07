@@ -27,7 +27,10 @@ const Navigation = () => {
             <Link to="/userMaintenace">Maintenance</Link>
           </li>
           <li className="nav-list-item">
-            <Link to="/register">Register</Link>
+            <Link to="/registerUser">Register User</Link>
+          </li>
+          <li>
+            <Link to="/registerCar"> Register Car</Link>
           </li>
           <li className="nav-list-item">
             <Link to="/repairlog">Repair Log</Link>

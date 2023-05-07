@@ -1,6 +1,7 @@
 import axios from "axios"
 const vinDecodeUrl = "http://api.carmd.com/v3.0/decode?vin=1GNALDEK9FZ108495"
 const scheduledMaintenanceUrl = "http://api.carmd.com/v3.0/maint?vin=1GNALDEK9FZ108495&mileage=51000"
+const repairLogUrl = ""
 
 //Vin Decode
 export const fetchUsersCar = (car) => {
@@ -41,6 +42,34 @@ export const fetchScheduledMaintenance = (maintenance) => {
             }
             dispatch(action)
         })
+    }
+}
+
+export const addRepair = (repair) => {
+    return {
+        type: 'ADD_REPAIR',
+        value: repair
+    }
+}
+
+export const removeRepair = (index) => {
+    return {
+        type: 'REMOVE_REPAIR',
+        value: index
+    }
+}
+
+export const addCar = (car) => {
+    return {
+        type: "ADD_CAR",
+        value: car
+    }
+}
+
+export const removeCar = (index) => {
+    return {
+        type: "REMOVE_CAR",
+        value: index
     }
 }
 
